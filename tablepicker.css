@@ -1,9 +1,20 @@
-h1, h2, h3 {
+/*main styling (for mobile devices 350 and less)*/
+
+h1, h2 {
     font-family: 'Rubik', sans-serif; 
     font-weight: 700;
     text-align: center;
     color: #e34e45;
     margin-bottom: -1px;
+}
+
+h3 {
+   font-family: 'Rubik', sans-serif; 
+    font-weight: 700;
+    color: #e34e45;
+    margin-bottom: -1px;
+    margin-left: -95px;
+    margin-top: -5px;
 }
 
 h4 {
@@ -21,40 +32,88 @@ body {
 .circlesBox {
     background-color:#eee;
     border-radius: 5px;
+    
 }
 
 #circles {
-    display: flex;
-    flex-basis: 20%;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+   height: 300px;
+   width: 300px;
+   flex-wrap: wrap;
+   padding: 15px 30px;
+   border-radius: 3px; 
+   
 }
 
 #resform {
     background-color:#eee;
-    position:fixed;
-    margin-top: -200px;
-    margin-left: 105px;
-    display:inline-block;
+    position: relative;
+    
+    margin: 0 auto;
+    margin-top: -240px;
     width: 300px;
-    height: 250px;
     border-radius: 5px;
+    display: block;
+    z-index: 1;
+    height: auto;  
+}
+
+#clOut {
+   margin-right: -270px;
+   position:relative;
+}
+
+form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+    background-color: #eee;
+    border: none;
+    border-bottom: 1px black solid;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#popupForm{
+    
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+    width: 300px;
+    
 }
 
 #submitbtn {
     background-color: #008000;
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
 }
+
+
 
 .table { 
   height: 50px;
   width: 50px;
   background-color: #ccc;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-flex;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
+
 
 .table.available {
   background-color: #ccc;
@@ -65,5 +124,24 @@ body {
 .table.reserved {
   background-color: #ADAAAA;
   cursor: not-allowed;    
+}
+
+/*styling for devices under 768px*/
+@media only screen and (min-device-width : 768px) {
+   #resform {
+    position: relative;
+    margin-top: -100px;
+    display: block;
+    z-index: 1;
+    height: auto;  
+    margin: 0 auto;
+}
+    
+#clOut {
+   margin-top: 5px;
+   position:relative;
+}
+ 
+    
 }
 
